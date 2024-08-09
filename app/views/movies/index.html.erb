@@ -1,0 +1,22 @@
+<div id="banner" class="container">
+  <div class="d-flex justify-content-between">
+    <div>
+      <h2 class="m-2 p-2">Movies:</h2>
+    </div>
+    <div class="m-3 p-2">
+      <%= link_to "My lists",
+      lists_path(@list) %>
+    </div>
+  </div>
+</div>
+<ul class="col-6">
+  <% @movies.each do |movie| %>
+    <li><%= link_to movie.title, movie_path(movie) %></li>
+    <li><%= image_tag movie.poster_url, class: "w-50" %></li>
+  <% end %>
+</ul>
+<%= @movies %>
+<div>
+  <%= link_to "My lists",
+  lists_path(@list) %>
+</div>

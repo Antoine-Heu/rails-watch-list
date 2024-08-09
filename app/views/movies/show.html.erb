@@ -1,0 +1,16 @@
+<button class="m-2 p-2 border rounded-2 bg-dark text-white">
+  <%= link_to "Home",
+  movies_path(@task) %>
+</button>
+<div class="container">
+  <div class="col-8 text-center">
+    <h2><%= @movie.title %></h2>
+    <div>
+      <div class="m-3 p-3">
+        <p>"<%= @movie.overview %>"</p>
+        <p><%= @movie.rating %>/10</p>
+      </div>
+      <p><%= image_tag @movie.poster_url, class: "w-75" %></p>
+    <div>
+  </div>
+</div>

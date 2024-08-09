@@ -1,0 +1,6 @@
+<%= simple_form_for @bookmark do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.association :movie %>
+  <%= f.submit %>
+<% end %>

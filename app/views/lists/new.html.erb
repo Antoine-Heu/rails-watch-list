@@ -1,0 +1,10 @@
+<button class="m-2 p-2 border rounded-2 bg-dark text-white">
+  <%= link_to "Home",
+  movies_path(@task) %>
+</button>
+
+<%= simple_form_for @list do |f| %>
+  <%= f.label :name%>
+  <%= f.text_field :name%>
+  <%= f.submit %>
+<% end %>
